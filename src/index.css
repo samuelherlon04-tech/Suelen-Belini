@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-gold: #C5A059;
+    --brand-gold-light: #E2C992;
+    --brand-olive: #5A5A40;
+    --brand-dark: #121212;
+    --brand-cream: #FDFCFB;
+    --brand-card-bg: #FFFFFF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Inter', sans-serif;
+    background-color: #FDFCFB;
+    color: #121212;
+  }
+
+  h1, h2, h3, h4, .serif {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .signature {
+    font-family: 'Great Vibes', cursive;
+  }
+}
+
+/* Artistic Flair Dot Pattern */
+.dot-pattern {
+  background-image: radial-gradient(#C5A059 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  border-radius: 20px;
+}
+
+.glass-card-dark {
+  background: rgba(18, 18, 18, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  border-radius: 20px;
+}
+
+.btn-premium {
+  background: #121212;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 14px;
+  font-weight: 600;
+  text-align: center;
+  border: 1px solid #C5A059;
+  transition: all 0.3s;
+}
+.btn-premium:hover {
+  background: #1c1c1c;
+  border-color: #E2C992;
+  box-shadow: 0 8px 25px rgba(197, 160, 89, 0.25);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FDFCFB;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5A5A40;
+}
+
+/* Hide scrollbar for directional logradouro */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
